@@ -1,0 +1,76 @@
+
+
+
+/* Card Titles */
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #004E64;
+}
+
+/* Card Image */
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+/* Card Styles */
+.card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #F4F4F4;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 78, 100, 0.2);
+}
+
+/* Card Image Hover Zoom */
+.card img {
+  transition: transform 0.4s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+/* Buttons inside Cards */
+.card .btn {
+  transition: all 0.3s ease;
+  background-color: #25A18E;
+  color: white;
+  border: none;
+}
+
+.card .btn:hover {
+  background-color: #F6AE2D;
+  color: #333;
+}
+
+/* Favorite Button */
+.favorite-btn {
+  border: none;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+  z-index: 10;
+}
+
+.favorite-btn:hover {
+  background: #F6AE2D;
+  transform: scale(1.1);
+}
+
+.favorite-btn.favorited {
+  background-color: #ffe3e3;
+}

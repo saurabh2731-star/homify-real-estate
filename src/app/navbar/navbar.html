@@ -1,0 +1,69 @@
+<header class="hero-section">
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark  px-4">
+    <div class="container-fluid">
+      <!-- Brand -->
+      <a class="navbar-brand fw-bold text-warning" routerLink="/home">Homify</a>
+
+      <!-- Mobile Toggle -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Nav Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+
+          <!-- Home -->
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/home">Home</a>
+          </li>
+
+          <!-- About -->
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/about-us">About Us</a>
+          </li>
+
+          <!-- Browse Dropdown -->
+          <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" id="browseDropdown" role="button" data-bs-toggle="dropdown" data-bs-offset="0,8">
+    Browse Properties
+  </a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" routerLink="/villas">Villas</a></li>
+    <li><a class="dropdown-item" routerLink="/studios">Studios</a></li>
+    <li><a class="dropdown-item" routerLink="/pent-houses">Penthouses</a></li>
+  </ul>
+</li>
+
+          <!-- Featured -->
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/favourite">Favourite</a>
+          </li>
+
+          <!-- Sell / Rent -->
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/sell-rent">Sell / Rent With Us</a>
+          </li>
+
+          <!-- Blog -->
+          <li class="nav-item">
+            <a class="nav-link" routerLink="blog-lifestyle">Blog / Lifestyle</a>
+          </li>
+
+          <!-- Contact -->
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/contact">Contact</a>
+          </li>
+        </ul>
+        <!-- Login and sign-up -->
+        <div class="d-flex gap-2">
+        <a class="btn btn-outline-warning btn-sm" routerLink="/login">Login</a>
+        <!-- <a class="btn btn-warning btn-sm" routerLink="/register">Sign Up</a> -->
+      </div>
+      </div>
+    </div>
+  </nav>
+
+ 
+</header>

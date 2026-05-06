@@ -1,0 +1,66 @@
+<div class="container my-5">
+  <h2 class="text-center mb-4">❤️ Your Favorite Properties</h2>
+
+  <!-- Favorite Villas -->
+  <div *ngIf="favoriteVillas.length > 0" class="mt-4">
+    <h4 class="mb-3">🏡 Favorite Villas</h4>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col" *ngFor="let villa of favoriteVillas">
+        <div class="card h-100 border-success">
+          <img [src]="villa.image" class="card-img-top" [alt]="villa.name">
+          <div class="card-body">
+            <h5 class="card-title">{{ villa.name }}</h5>
+            <p class="text-muted">{{ villa.location }}</p>
+            <p class="fw-bold">₹ {{ villa.price }}</p>
+            <button class="btn btn-danger" (click)="removeFromFavorites(villa.id)">Remove</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Favorite Studios -->
+  <div *ngIf="favoriteStudios.length > 0" class="mt-5">
+    <h4 class="mb-3">🏙️ Favorite Studios</h4>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col" *ngFor="let studio of favoriteStudios">
+        <div class="card h-100 border-info">
+          <img [src]="studio.image" class="card-img-top" [alt]="studio.name">
+          <div class="card-body">
+            <h5 class="card-title">{{ studio.name }}</h5>
+            <p class="text-muted">{{ studio.location }}</p>
+            <p class="fw-bold">₹ {{ studio.price }}</p>
+            <button class="btn btn-danger" (click)="removeStudio(studio.id)">Remove</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- If No Favorites
+  <div *ngIf="favoriteVillas.length === 0 && favoriteStudios.length === 0" class="text-center mt-5">
+    <p class="text-muted">No favorite properties added yet.</p>
+  </div>
+</div> -->
+
+<div *ngIf="favoritePenthouses.length > 0" class="mt-4">
+    <h4 class="mb-3">🏢 Favorite Penthouses</h4>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col" *ngFor="let penthouse of favoritePenthouses">
+        <div class="card h-100 border-success">
+          <img [src]="penthouse.image" class="card-img-top" [alt]="penthouse.name">
+          <div class="card-body">
+            <h5 class="card-title">{{ penthouse.name }}</h5>
+            <p class="text-muted">{{ penthouse.location }}</p>
+            <p class="fw-bold">₹ {{ penthouse.price }}</p>
+            <button class="btn btn-danger" (click)="removePenthouse(penthouse.id)">Remove</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- If No Favorites -->
+  <div *ngIf="favoriteVillas.length === 0 && favoriteStudios.length === 0 && favoritePenthouses.length === 0" class="text-center mt-5">
+    <p class="text-muted">No favorite properties added yet.</p>
+  </div>

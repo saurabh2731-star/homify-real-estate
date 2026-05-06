@@ -1,0 +1,50 @@
+<div class="container villa-detail-page my-5">
+
+  <!-- Header Row -->
+  <div class="villa-header d-flex justify-content-between align-items-center mb-4 flex-wrap">
+    <!-- Back Button -->
+    <a routerLink="/pent-houses" class="btn btn-back mb-2">
+      <i class="bi bi-arrow-left"></i> Back to Penthouses
+    </a>
+
+    <!-- Title & Location -->
+    <div class="text-center villa-header-text">
+      <h1 class="villa-title">{{ penthouse.name }}</h1>
+      <p class="villa-location"><i class="bi bi-geo-alt"></i> {{ penthouse.location }}</p>
+    </div>
+
+    <!-- Price -->
+    <h3 class="villa-price mb-2">{{ penthouse.price }}</h3>
+  </div>
+
+  <!-- Hero Image -->
+  <div class="villa-hero">
+    <img [src]="penthouse.image" [alt]="penthouse.name">
+  </div>
+
+  <!-- Highlights -->
+  <div class="villa-highlights my-4 row text-center">
+    <div class="col-md-3 col-6">
+      <i class="bi bi-house-door display-6"></i>
+      <p class="fw-bold mt-2">{{ penthouse.bhk }} BHK</p>
+    </div>
+    <div class="col-md-3 col-6">
+      <i class="bi bi-arrows-fullscreen display-6"></i>
+      <p class="fw-bold mt-2">{{ penthouse.area }} sq.ft</p>
+    </div>
+  </div>
+
+  <!-- Description -->
+  <div class="villa-description mt-5">
+    <h4>About this Penthouse</h4>
+    <p>{{ penthouse.description }}</p>
+  </div>
+
+  <!-- Amenities -->
+  <div class="villa-amenities mt-5">
+    <h4>Amenities</h4>
+    <ul>
+      <li *ngFor="let feature of penthouse.features">{{ feature }}</li>
+    </ul>
+  </div>
+</div>

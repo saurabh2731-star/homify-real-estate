@@ -1,0 +1,220 @@
+<!-- HERO CONTENT -->
+<div class="hero-section text-white text-start">
+  <h1 data-aos="fade-up" data-aos-duration="1200">
+    <span class="luxury-text">Luxarey</span><br>
+    <strong>SUPER HOME</strong>
+  </h1>
+
+  <p class="subheading" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+    Find your perfect space — where comfort meets elegance.
+  </p>
+
+  <div data-aos="zoom-in" data-aos-delay="300">
+    <a [routerLink]="['/contact']" class="btn btn-warning btn-lg mt-4">Book Now</a>
+  </div>
+</div>
+
+<!-- QUICK SEARCH SECTION -->
+<section class="quick-search py-5 bg-light" data-aos="fade-up">
+  <div class="container">
+    <div class="search-box p-4 shadow rounded-4 bg-white">
+      <h2 class="text-center mb-4">🏠 Find Your Perfect Home</h2>
+      <form class="row g-3 align-items-center justify-content-center">
+        
+        <!-- Buy/Rent -->
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <label for="buyRentSelect" class="visually-hidden">Select Buy or Rent</label>
+          <div class="input-group">
+            <span class="input-group-text bg-white"><i class="bi bi-house-door-fill"></i></span>
+            <select id="buyRentSelect" class="form-select" aria-label="Select Buy or Rent">
+              <option selected>Buy</option>
+              <!-- <option>Rent</option> -->
+            </select>
+          </div>
+        </div>
+
+        <!-- Location -->
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <label for="locationInput" class="visually-hidden">Enter location</label>
+          <div class="input-group">
+            <span class="input-group-text bg-white"><i class="bi bi-geo-alt-fill"></i></span>
+            <input type="text" id="locationInput" class="form-control" placeholder="Enter location" aria-label="Enter location">
+          </div>
+        </div>
+
+        <!-- Property Type -->
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <label for="propertyTypeSelect" class="visually-hidden">Select property type</label>
+          <div class="input-group">
+            <span class="input-group-text bg-white"><i class="bi bi-building-fill"></i></span>
+            <select id="propertyTypeSelect" class="form-select" aria-label="Select property type">
+              <option>Villa</option>
+              <option>Penthouse</option>
+              <option>Studio</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Search Button -->
+        <div class="col-lg-2 col-md-4 col-sm-6 text-center">
+          <button type="submit" class="btn btn-search w-100" routerLink="/villas">
+            <i class="bi bi-search"></i> Search
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED PROPERTIES -->
+<section class="featured-properties py-5" data-aos="fade-up" data-aos-duration="1000">
+  <div class="container">
+    <h2 class="mb-4 text-center">🏡 Featured Properties</h2>
+    
+    <div id="featuredPropertiesCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <!-- First property -->
+        <div class="carousel-item active">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <img src="/new/Luxury Villa in Beverly Hills 5 Beds.jpg" class="d-block w-100 rounded" alt="Property 1">
+            </div>
+            <div class="col-md-6">
+              <h3>Luxury Villa in Beverly Hills</h3>
+              <p class="text-muted">5 Beds • 4 Baths • 4500 sq.ft</p>
+              <h4 class="text-primary">3,500,000</h4>
+              <a routerLink="/villas" class="btn btn-outline-primary mt-3">View Details</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Second property -->
+        <div class="carousel-item">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <img src="/new/Modern Penthouse in New York.jpg" class="d-block w-100 rounded" alt="Property 2">
+            </div>
+            <div class="col-md-6">
+              <h3>Modern Penthouse</h3>
+              <p class="text-muted">3 Beds • 3 Baths • 2800 sq.ft</p>
+              <h4 class="text-primary">$4,200,000</h4>
+              <a routerLink="/pent-houses" class="btn btn-outline-primary mt-3">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#featuredPropertiesCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#featuredPropertiesCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us / Core Values Section -->
+<section class="why-choose-us py-5 bg-light" data-aos="fade-up" data-aos-duration="1000">
+  <div class="container">
+    <h2 class="text-center mb-5">Why Choose Us</h2>
+    <div class="row text-center g-4">
+      <div class="col-md-3">
+        <div class="icon-box mb-3">
+          <i class="fas fa-shield-alt fa-3x text-primary"></i>
+        </div>
+        <h5>Trusted Agents</h5>
+        <p class="text-muted">Experienced professionals you can rely on.</p>
+      </div>
+      <div class="col-md-3">
+        <div class="icon-box mb-3">
+          <i class="fas fa-home fa-3x text-primary"></i>
+        </div>
+        <h5>Verified Listings</h5>
+        <p class="text-muted">Only genuine luxury properties vetted for you.</p>
+      </div>
+      <div class="col-md-3">
+        <div class="icon-box mb-3">
+          <i class="fas fa-headset fa-3x text-primary"></i>
+        </div>
+        <h5>24/7 Support</h5>
+        <p class="text-muted">We’re here to help you any time of the day.</p>
+      </div>
+      <div class="col-md-3">
+        <div class="icon-box mb-3">
+          <i class="fas fa-dollar-sign fa-3x text-primary"></i>
+        </div>
+        <h5>Best Prices</h5>
+        <p class="text-muted">Competitive pricing on all our luxury homes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="latest-blog-lifestyle py-5" data-aos="fade-up" data-aos-duration="1200">
+  <div class="container">
+    <h2 class="text-center mb-4 fw-bold">
+      ✨ Latest from Our <span class="highlight">Blog & Lifestyle</span>
+    </h2>
+    <p class="text-center text-muted mb-5">
+      Explore insights, design tips, and the latest in luxury living.
+    </p>
+    
+    <div class="row g-4">
+      <!-- Blog Post 1 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="lux-card h-100 shadow-lg rounded-4 overflow-hidden">
+          <div class="lux-img position-relative overflow-hidden">
+            <img src="/new/Blog1.jpg" alt="Luxury Home Buying Tips" class="img-fluid transition-scale">
+            <span class="tag position-absolute top-0 start-0 px-3 py-1">Blog</span>
+          </div>
+          <div class="lux-content p-4 d-flex flex-column">
+            <h5 class="fw-bold mb-2">Top Tips for Buying Luxury Homes</h5>
+            <p class="flex-grow-1 text-muted">
+              Discover expert advice on navigating the luxury property market...
+            </p>
+            <a routerLink="/blog-lifestyle" class="lux-btn mt-auto">Read More →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lifestyle Post 1 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="lux-card h-100 shadow-lg rounded-4 overflow-hidden">
+          <div class="lux-img position-relative overflow-hidden">
+            <img src="/new/Luxury Villa Interior.jpg" alt="Modern Luxury Interiors" class="img-fluid transition-scale">
+            <span class="tag position-absolute top-0 start-0 px-3 py-1">Lifestyle</span>
+          </div>
+          <div class="lux-content p-4 d-flex flex-column">
+            <h5 class="fw-bold mb-2">Creating a Modern Luxury Home Interior</h5>
+            <p class="flex-grow-1 text-muted">
+              Explore stunning designs and decor ideas for your dream space...
+            </p>
+            <a routerLink="/blog-lifestyle" class="lux-btn mt-auto">Read More →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Post 2 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="lux-card h-100 shadow-lg rounded-4 overflow-hidden">
+          <div class="lux-img position-relative overflow-hidden">
+            <img src="/new/blog2.jpg" alt="Real Estate Trends" class="img-fluid transition-scale">
+            <span class="tag position-absolute top-0 start-0 px-3 py-1">Blog</span>
+          </div>
+          <div class="lux-content p-4 d-flex flex-column">
+            <h5 class="fw-bold mb-2">Luxury Real Estate Market Trends 2025</h5>
+            <p class="flex-grow-1 text-muted">
+              Stay ahead with the latest insights into the luxury property scene...
+            </p>
+            <a routerLink="/blog-lifestyle" class="lux-btn mt-auto">Read More →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

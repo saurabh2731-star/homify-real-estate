@@ -1,0 +1,21 @@
+<section class="blogs-section py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">Latest Blogs & Lifestyle</h2>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6" *ngFor="let post of posts">
+        <div class="blog-card shadow-sm rounded-4 overflow-hidden">
+          <img [src]="post.image" 
+               [alt]="post.title || 'Image for blog post ' + (post.title || 'untitled')" 
+               class="blog-img" 
+               [title]="post.title || 'Click to read blog post'">
+          <div class="p-3">
+            <span class="category-tag">{{ post.category }}</span>
+            <h5 class="mt-2">{{ post.title }}</h5>
+            <p>{{ post.shortDescription }}</p>
+            <a [routerLink]="['/blog-lifestyle', post.id]" class="read-more">Read More →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

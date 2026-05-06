@@ -1,0 +1,34 @@
+<div class="container my-5">
+  <h2 class="text-center mb-4">🏡 Available Villas</h2>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let villa of villas">
+      <!-- Entire card is wrapped in an <a> tag -->
+      <a [routerLink]="['/villa-detail', villa.id]" class="text-decoration-none">
+        <div class="card h-100 shadow">
+          <div class="position-relative">
+            <img [src]="villa.image" class="card-img-top" [alt]="villa.name" loading="lazy">
+
+            <!-- Favorite Button Toggle -->
+            <button class="btn btn-light position-absolute top-0 end-0 m-2 rounded-circle shadow"
+                    (click)="addToFavorites(villa); $event.stopPropagation()" *ngIf="!isFavorite(villa.id)" title="Add to Favorites">
+              <i class="bi bi-heart"></i>
+            </button>
+            <button class="btn btn-danger position-absolute top-0 end-0 m-2 rounded-circle shadow"
+                    (click)="removeFromFavorites(villa.id); $event.stopPropagation()" *ngIf="isFavorite(villa.id)" title="Remove from Favorites">
+              <i class="bi bi-heart-fill"></i>
+            </button>
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title">{{ villa.name }}</h5>
+            <p class="text-muted">{{ villa.location }}</p>
+            <p class="fw-bold">₹ {{ villa.price }}</p>
+            <!-- View Details Button (Optional, if you still want a separate button) -->
+            <a [routerLink]="['/villa-detail', villa.id]" class="btn btn-outline-primary">View Details</a>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

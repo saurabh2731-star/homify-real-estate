@@ -1,0 +1,130 @@
+/* Transparent Glass-Like Navbar */
+.navbar {
+  background: rgba(0, 0, 0, 0.6); /* Dark glass effect */
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+  backdrop-filter: blur(12px);    /* Strong blur */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  z-index: 999;
+}
+
+/* Brand Styling */
+.navbar-brand {
+  color: #ffc107 !important;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/* Nav Links */
+.navbar-nav .nav-link {
+  color: #fff !important;
+  padding: 8px 16px;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffc107 !important;
+}
+
+/* Dropdown Menu */
+/* Dropdown Menu Styling */
+.navbar .dropdown-menu {
+  margin-top: 8px; /* creates gap between Browse Properties and dropdown */
+  background-color: rgba(0, 0, 0, 0.85);
+  border: none;
+  border-radius: 10px; /* smooth rounded edges */
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  min-width: 200px; /* keeps size consistent */
+}
+
+/* Dropdown items */
+.dropdown-menu .dropdown-item {
+  color: #f8f9fa;
+  padding: 10px 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: rgba(255, 193, 7, 0.15); /* subtle gold hover */
+  color: #ffc107;
+}
+
+.dropdown-menu .dropdown-item {
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffc107;
+}
+
+/* Mobile Toggle Icon */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  filter: brightness(200%);
+}
+
+
+.navbar-nav .nav-link.active {
+  background-color: rgba(255, 193, 7, 0.2); /* Gold tint */
+  border-bottom: 2px solid #ffc107; /* Underline effect */
+}
+.nav-item.dropdown .nav-link::after {
+  content: " ▾";
+  font-size: 0.7rem;
+  margin-left: 4px;
+  color: #ffc107;
+}
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 4px 25px rgba(0,0,0,0.6);
+}
+@media (max-width: 992px) {
+  .navbar-nav {
+    text-align: center;
+    gap: 8px;
+  }
+  .navbar .dropdown-menu {
+    text-align: center;
+  }
+}
+.btn-outline-warning {
+  border: 1.5px solid #ffc107;
+  color: #ffc107;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 5px 16px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-warning:hover {
+  background: #ffc107;
+  color: #000;
+  box-shadow: 0 0 10px #ffc107;
+}
+
+/* Show dropdown on hover (desktop only) */
+@media (min-width: 992px) {
+  .navbar .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 8px; /* spacing from parent link */
+  }
+  
+  /* Keep the parent link highlighted */
+  .navbar .nav-item.dropdown:hover .nav-link {
+    color: #ffc107; /* gold theme highlight */
+  }
+}

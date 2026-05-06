@@ -1,0 +1,36 @@
+<div class="container my-5">
+  <h2 class="text-center mb-4">🎬 Available Studios</h2>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let studio of studios">
+      <div class="card h-100 shadow studio-card position-relative">
+
+        <!-- Studio Image -->
+        <img [src]="studio.image" class="card-img-top" [alt]="studio.name" loading="lazy">
+
+        <!-- Favorite Toggle Buttons -->
+        <button class="btn btn-light position-absolute top-0 end-0 m-2 rounded-circle shadow favorite-btn"
+                (click)="addToFavorites(studio)"
+                *ngIf="!isFavorite(studio.id)"
+                title="Add to Favorites">
+          <i class="bi bi-heart"></i>
+        </button>
+
+        <button class="btn btn-danger position-absolute top-0 end-0 m-2 rounded-circle shadow favorite-btn"
+                (click)="removeFromFavorites(studio.id)"
+                *ngIf="isFavorite(studio.id)"
+                title="Remove from Favorites">
+          <i class="bi bi-heart-fill"></i>
+        </button>
+
+        <!-- Card Content -->
+        <div class="card-body">
+          <h5 class="card-title">{{ studio.name }}</h5>
+          <p class="text-muted">{{ studio.location }}</p>
+          <p class="fw-bold">₹ {{ studio.price }}</p>
+          <a [routerLink]="['/studiodetails', studio.id]" class="btn btn-outline-primary">View Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

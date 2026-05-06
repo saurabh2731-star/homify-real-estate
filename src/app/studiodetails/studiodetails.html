@@ -1,0 +1,50 @@
+<div class="container villa-detail-page my-5">
+
+  <!-- Header Row -->
+  <div class="villa-header d-flex justify-content-between align-items-center mb-4 flex-wrap">
+    <!-- Back Button -->
+    <a routerLink="/villas" class="btn btn-back mb-2">
+      <i class="bi bi-arrow-left"></i> Back to Villas
+    </a>
+
+    <!-- Title & Location -->
+    <div class="text-center villa-header-text">
+      <h1 class="villa-title">{{ studio.name }}</h1>
+      <p class="villa-location"><i class="bi bi-geo-alt"></i> {{ studio.location }}</p>
+    </div>
+
+    <!-- Price -->
+    <h3 class="villa-price mb-2">{{ studio.price }}</h3>
+  </div>
+
+  <!-- Hero Image -->
+  <div class="villa-hero">
+    <img [src]="studio.image" [alt]="studio.name">
+  </div>
+
+  <!-- Highlights -->
+  <div class="villa-highlights my-4 row text-center">
+    <div class="col-md-3 col-6">
+      <i class="bi bi-house-door display-6"></i>
+      <p class="fw-bold mt-2">{{ studio.bhk }} BHK</p>
+    </div>
+    <div class="col-md-3 col-6">
+      <i class="bi bi-arrows-fullscreen display-6"></i>
+      <p class="fw-bold mt-2">{{ studio.area }} sq.ft</p>
+    </div>
+  </div>
+
+  <!-- Description -->
+  <div class="villa-description mt-5">
+    <h4>About this Villa</h4>
+    <p>{{ studio.description }}</p>
+  </div>
+
+  <!-- Amenities -->
+  <div class="villa-amenities mt-5">
+    <h4>Amenities</h4>
+    <ul>
+      <li *ngFor="let feature of studio.features">{{ feature }}</li>
+    </ul>
+  </div>
+</div>

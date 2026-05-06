@@ -1,0 +1,129 @@
+<div class="container my-5 sell-rent-section">
+  <!-- Hero Section -->
+  <div class="text-center mb-5">
+    <h2 class="fw-bold text-white">Sell or Rent Your Property With Us</h2>
+    <p class="text-light">Get the best price for your property with our fast and hassle-free process.</p>
+  </div>
+
+  <!-- Steps Section -->
+  <div class="row text-center mb-5">
+    <div class="col-md-4">
+      <div class="p-4 shadow rounded-4 h-100 benefit-card">
+        <i class="bi bi-building-fill display-4 text-primary mb-3"></i>
+        <h5 class="fw-bold">1. Submit Property</h5>
+        <p class="text-muted">Fill out our quick form with your property details and images.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="p-4 shadow rounded-4 h-100 benefit-card">
+        <i class="bi bi-megaphone-fill display-4 text-success mb-3"></i>
+        <h5 class="fw-bold">2. We Market It</h5>
+        <p class="text-muted">Our team lists your property to thousands of potential buyers/renters.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="p-4 shadow rounded-4 h-100 benefit-card">
+        <i class="bi bi-cash-stack display-4 text-warning mb-3"></i>
+        <h5 class="fw-bold">3. Get The Best Deal</h5>
+        <p class="text-muted">Close the deal quickly with our trusted buyers and renters.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Property Submission Form -->
+  <div class="container py-5">
+    <h2 class="text-center mb-4 text-white">🏠 Sell / Rent Your Property</h2>
+
+    <div class="card shadow-lg p-4 rounded-4">
+      <form [formGroup]="propertyForm" (ngSubmit)="onSubmit()">
+
+        <!-- Owner Name -->
+        <div class="mb-3">
+          <label class="form-label fw-bold text-white">Owner Name</label>
+          <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+            <input type="text" class="form-control" formControlName="ownerName" placeholder="Enter your full name">
+          </div>
+          <small class="text-danger" *ngIf="propertyForm.get('ownerName')?.touched && propertyForm.get('ownerName')?.invalid">
+            Owner name is required
+          </small>
+        </div>
+
+        <!-- Email -->
+        <div class="mb-3">
+          <label class="form-label fw-bold text-white">Email</label>
+          <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>
+            <input type="email" class="form-control" formControlName="email" placeholder="Enter your email">
+          </div>
+          <small class="text-danger" *ngIf="propertyForm.get('email')?.touched && propertyForm.get('email')?.invalid">
+            Valid email is required
+          </small>
+        </div>
+
+        <!-- Phone -->
+        <div class="mb-3">
+          <label class="form-label fw-bold text-white">Phone</label>
+          <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
+            <input type="tel" class="form-control" formControlName="phone" placeholder="Enter phone number">
+          </div>
+          <small class="text-danger" *ngIf="propertyForm.get('phone')?.touched && propertyForm.get('phone')?.invalid">
+            Phone number is required (10 digits)
+          </small>
+        </div>
+
+        <!-- Property Title -->
+        <div class="mb-3">
+          <label class="form-label fw-bold text-white">Property Title</label>
+          <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-house-door-fill"></i></span>
+            <input type="text" class="form-control" formControlName="title" placeholder="E.g. Luxury 3BHK Villa">
+          </div>
+          <small class="text-danger" *ngIf="propertyForm.get('title')?.touched && propertyForm.get('title')?.invalid">
+            Title is required
+          </small>
+        </div>
+
+        <!-- Price -->
+        <div class="mb-3">
+          <label class="form-label fw-bold text-white">Price (₹)</label>
+          <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-currency-rupee"></i></span>
+            <input type="number" class="form-control" formControlName="price" placeholder="Enter price">
+          </div>
+          <small class="text-danger" *ngIf="propertyForm.get('price')?.touched && propertyForm.get('price')?.invalid">
+            Price is required (minimum ₹1000)
+          </small>
+        </div>
+
+        <!-- Location -->
+        <div class="mb-3">
+          <label class="form-label fw-bold text-white">Location</label>
+          <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-geo-alt-fill"></i></span>
+            <input type="text" class="form-control" formControlName="location" placeholder="Enter property location">
+          </div>
+          <small class="text-danger" *ngIf="propertyForm.get('location')?.touched && propertyForm.get('location')?.invalid">
+            Location is required
+          </small>
+        </div>
+
+        <!-- Description -->
+        <div class="mb-3">
+          <label class="form-label fw-bold text-white">Description</label>
+          <textarea class="form-control" formControlName="description" rows="3" placeholder="Describe your property"></textarea>
+        </div>
+
+
+        <!-- Buttons -->
+        <div class="text-center mt-4">
+          <button type="submit" class="btn btn-gold px-4 py-2 animated-btn">
+            <i class="bi bi-send-fill"></i> Submit Property
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+.blog-card {
+  background: white;
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.category-tag {
+  font-size: 0.8rem;
+  color: white;
+  background: #e3b04b;
+  padding: 3px 8px;
+  border-radius: 5px;
+}
+
+.read-more {
+  text-decoration: none;
+  font-weight: 500;
+  color: #0077cc;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
